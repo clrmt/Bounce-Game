@@ -154,7 +154,8 @@ menu = Menu(root)
 def start():
     response = msgbox.askyesno("새 게임", "플레이 중인 게임은 저장되지 않습니다.\n새로 시작하시겠습니까?")
     if response == 1:
-        gotoMainScreen
+        gotoMainScreen()
+        root.bind_all("<Return>", start_game)
 #랭킹 메뉴
 def ranking():
     rankdb.showRank()
